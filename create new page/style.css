@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    min-height: 100vh;
+    width: 100%;
+    background: #f2f4f7;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 12px;
+}
+
+/* ===== FACEBOOK LOGO ===== */
+.F-logo img {
+    height: 100px;
+    display: block;
+}
+
+/* ===== FORM CARD ===== */
+.form-content {
+    width: 100%;
+    max-width: 455px;
+    background: #ffffff;
+    box-shadow: rgba(68, 68, 68, 0.399) 0px 3px 8px 3px;
+    border-radius: 8px;
+    padding-bottom: 10px;
+}
+
+/* ===== HEADER ===== */
+.head-content {
+    line-height: 30px;
+    padding: 0 12px;
+}
+
+.head-content h1 {
+    margin-top: 15px;
+    font-size: 25px;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+}
+
+.head-content p {
+    font-size: 14px;
+    color: #606770;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+}
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/* ===== NAME FIELDS ===== */
+.name-field {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 8px;
+    padding: 0 15px;
+}
+
+.First-name,
+.Sir-name {
+    flex: 1;
+}
+
+.First-name input,
+.Sir-name input {
+    height: 40px;
+    width: 100%;
+    padding: 11px;
+    font-size: 16px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid #00000067;
+}
+
+.First-name input:focus,
+.Sir-name input:focus {
+    border-color: #0866ff;
+}
+
+/* ===== LABELS ===== */
+.date-of-birth,
+.gender {
+    font-size: 13px;
+    font-family: Helvetica, sans-serif;
+    color: #606770;
+    padding-left: 15px;
+    margin-top: 8px;
+}
+
+.date-of-birth i,
+.gender i {
+    font-size: 12px;
+}
+
+/* ===== DATE DROPDOWNS ===== */
+.form-D-M-Y {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 8px;
+    padding: 0 15px;
+}
+
+.form-D-M-Y select {
+    height: 36px;
+    flex: 1;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.395);
+    font-size: 15px;
+    font-family: Helvetica, sans-serif;
+    padding: 0 4px;
+}
+
+.form-D-M-Y select:focus {
+    border: 2.5px solid black;
+    outline: none;
+}
+
+/* ===== GENDER RADIO BUTTONS ===== */
+.gender-radio-btn {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 0 15px;
+}
+
+.Female,
+.Male,
+.Custom {
+    height: 36px;
+    flex: 1;
+    border: 1px solid rgba(0, 0, 0, 0.395);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    border-radius: 6px;
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.Female label,
+.Male label,
+.Custom label {
+    cursor: pointer;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Female label input,
+.Male label input,
+.Custom label input {
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* ===== TEXT INPUTS ===== */
+.two-inputs {
+    padding: 0 15px;
+    margin-top: 10px;
+}
+
+.M-no-or-E-address input,
+.Pssword input {
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 11px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid #00000067;
+    margin: 5px 0;
+}
+
+.M-no-or-E-address input:focus,
+.Pssword input:focus {
+    border-color: #0866ff;
+}
+
+/* ===== BOTTOM PARAGRAPHS ===== */
+.bottom-p-1 {
+    padding: 0 15px;
+    font-size: 12px;
+    font-family: Helvetica, sans-serif;
+    color: #626365;
+    margin: 11px 0;
+}
+
+.bottom-p-2 {
+    padding: 0 15px;
+    font-size: 12px;
+    font-family: Helvetica, sans-serif;
+    color: #626365;
+}
+
+.bottom-p-1 a,
+.bottom-p-2 a {
+    text-decoration: none;
+    color: #385898;
+}
+
+.bottom-p-1 a:hover,
+.bottom-p-2 a:hover {
+    text-decoration: underline;
+}
+
+/* ===== SIGN UP BUTTON ===== */
+.Sign-up-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.Sign-up-btn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38px;
+    width: clamp(160px, 42%, 200px);
+    background: #42b72a;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+}
+
+.Sign-up-btn a:hover {
+    background: #379c23;
+}
+
+/* ===== ALREADY HAVE ACCOUNT ===== */
+.A-ready-A {
+    margin: 20px 0 10px;
+}
+
+.A-ready-A h2 a {
+    font-size: 17px;
+    color: #1877f2;
+    text-decoration: none;
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    padding: 10px 0;
+}
+
+.A-ready-A h2 a:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .F-logo img {
+        height: 80px;
+    }
+
+    .form-content {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .container {
+        padding: 16px 8px;
+        justify-content: flex-start;
+        padding-top: 24px;
+    }
+
+    .F-logo img {
+        height: 70px;
+    }
+
+    .form-content {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .head-content h1 {
+        font-size: 22px;
+    }
+
+    .head-content p {
+        font-size: 13px;
+    }
+
+    .First-name input,
+    .Sir-name input {
+        font-size: 14px;
+        height: 38px;
+    }
+
+    .form-D-M-Y select {
+        font-size: 13px;
+        height: 34px;
+    }
+
+    .Female,
+    .Male,
+    .Custom {
+        font-size: 13px;
+        height: 34px;
+        padding: 0 8px;
+    }
+
+    .M-no-or-E-address input,
+    .Pssword input {
+        font-size: 15px;
+        height: 38px;
+    }
+
+    .Sign-up-btn a {
+        font-size: 18px;
+        height: 40px;
+        width: 55%;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+    .container {
+        padding: 12px 4px;
+    }
+
+    .name-field,
+    .form-D-M-Y,
+    .gender-radio-btn {
+        gap: 6px;
+        padding: 0 10px;
+    }
+
+    .two-inputs {
+        padding: 0 10px;
+    }
+
+    .head-content {
+        padding: 0 8px;
+    }
+
+    .Female,
+    .Male,
+    .Custom {
+        font-size: 12px;
+    }
+
+    .form-D-M-Y select {
+        font-size: 12px;
+    }
+
+    .Sign-up-btn a {
+        width: 65%;
+        font-size: 17px;
+    }
+
+    .bottom-p-1,
+    .bottom-p-2 {
+        padding: 0 10px;
+        font-size: 11px;
+    }
+}
+

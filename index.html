@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook-login or sign up </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./imges/facebook-transparent-icon.avif" type="image/x-icon" class="title-icon">
+
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-box">
+            <img src="./imges/facebook-logo.svg" alt="facebook-logo">
+            <span>Facebook helps you connect and share with the people in your life.</span>
+
+        </div>
+        <div class="right-box">
+            <form>
+                <div class="input-email">
+                    <input type="email" id="input-email" placeholder="Enter address or phone number">
+
+                </div>
+                
+              <div class="input-password">
+  <div class="pw-wrapper">           <!-- add this wrapper -->
+    <input type="password" id="input-password" placeholder="Password">
+    <span id="eye-icon" onclick="togglePassword()">👁️</span>
+  </div>
+</div>
+              
+                <div class="login-btn" >
+                    <button  type="button" onclick="loginhandler()">Login</button>
+                    <p>Forgotten password?</p>
+                    <hr>
+                </div>
+
+                <div class="Create-btn">
+                    <a href="./create new page/index.html">Create new account</a>
+                </div>
+            </form>
+            <p><a href="">Create a Page</a> for a celebrity, brand or business.</p>
+        </div>
+
+
+    </div>
+    
+       
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
