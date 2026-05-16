@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../imges/facebook-transparent-icon.avif" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
+ 
+<!-- CREATE POST MODAL -->
+<div class="modal-overlay hidden" id="postModal">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-header">
+      <span class="modal-title" id="modalTitle">Create post</span>
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-user">
+        <div class="modal-user-avatar">MK</div>
+        <div>
+          <div class="modal-user-name">Mubashir Khan</div>
+          <button class="modal-user-privacy">🌍 Public ▾</button>
+        </div>
+      </div>
+      <textarea class="modal-textarea" id="postText" placeholder="What's on your mind, Mubashir?" rows="4" maxlength="2000"></textarea>
+      <div class="img-preview-wrap" id="imgPreviewWrap">
+        <img id="imgPreview" class="img-preview" src="" alt="Preview">
+        <button class="img-remove" id="imgRemove" aria-label="Remove image">✕</button>
+      </div>
+      <div class="modal-divider"></div>
+      <div class="modal-add-to-post">
+        <span class="modal-add-label">Add to your post</span>
+        <div class="modal-add-icons">
+          <div class="add-icon-btn" title="Photo/Video">
+            🖼️
+            <input type="file" id="fileInput" accept="image/*" aria-label="Upload image">
+          </div>
+          <button class="add-icon-btn" title="Feeling/Activity">😊</button>
+          <button class="add-icon-btn" title="Tag people">👤</button>
+          <button class="add-icon-btn" title="Location">📍</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="modal-post-btn" id="modalPostBtn" disabled>Post</button>
+    </div>
+  </div>
+</div>
+ 
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-bg">
+    <div>
+      <div class="cover-title">MUBASHIR KHAN<br>GRAPHICS</div>
+    </div>
+    <div class="cover-subtitle">CREATIVE PHOTOSHOP EXPERT &nbsp;·&nbsp; GRAPHIC DESIGNER</div>
+    <button class="cover-edit">📷 Edit cover photo</button>
+  </div>
+</div>
+ 
+<div class="container">
+ 
+  <!-- PROFILE CARD -->
+  <div class="profile-card">
+    <div class="profile-header">
+      <div class="avatar-wrap">
+        <div class="avatar"><img src="../my image.png" alt="" style="width: 148px; height: 148px;"></div>
+        <div class="avatar-cam">📷</div>
+      </div>
+      <div class="profile-info">
+        <div class="profile-name">Mubashir Khan</div>
+        <div class="profile-friends">375 friends</div>
+        <div class="profile-bio">Graphic Designer and Learning Web &amp; Mobile app Development at (SMIT) @ Saylani Welfare 🎉</div>
+        <div class="profile-meta">
+          <div class="meta-tag"><span class="icon">📍</span> Karachi, Pakistan</div>
+          <div class="meta-tag"><span class="icon">🏫</span> Zafar Public Secondary School</div>
+        </div>
+      </div>
+      <div class="profile-actions">
+        <button class="btn btn-primary">+ Add to story</button>
+        <button class="btn btn-secondary">✏️ Edit profile</button>
+        <button class="btn-icon">⌄</button>
+      </div>
+    </div>
+    <div class="nav-tabs">
+      <div class="nav-tab active">All</div>
+      <div class="nav-tab">About</div>
+      <div class="nav-tab">Friends</div>
+      <div class="nav-tab">Photos</div>
+      <div class="nav-tab">Reels</div>
+      <div class="nav-tab">More ⌄</div>
+    </div>
+  </div>
+ 
+  <!-- TWO COLUMN -->
+  <div class="two-col">
+ 
+    <!-- LEFT -->
+    <div>
+      <div class="card">
+        <div class="card-title">Personal details <span class="card-edit">✏️</span></div>
+        <div class="detail-row"><span class="detail-icon">📍</span> Lives in Karachi, Pakistan</div>
+        <div class="detail-row"><span class="detail-icon">🏠</span> From Orangi Town</div>
+        <div class="detail-row"><span class="detail-icon">🎂</span> 28 June 2007</div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-title">Education <span class="card-edit">✏️</span></div>
+        <div class="edu-item">
+          <div class="edu-avatar">🏫</div>
+          <div>
+            <div class="edu-name">Zafar Public Secondary School</div>
+            <div class="edu-date">8 May 2013 – 24 Dec 2025 · High School</div>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-title">Skills &amp; Tools</div>
+        <div class="skills-wrap">
+          <span class="skill-tag blue">Adobe Photoshop</span>
+          <span class="skill-tag blue">Adobe Illustrator</span>
+          <span class="skill-tag yellow">Canva</span>
+          <span class="skill-tag pink">Graphic Design</span>
+          <span class="skill-tag blue">HTML / CSS</span>
+          <span class="skill-tag blue">JavaScript</span>
+          <span class="skill-tag yellow">Web Development</span>
+          <span class="skill-tag pink">Mobile App Dev</span>
+          <span class="skill-tag blue">Front-End Dev</span>
+        </div>
+      </div>
+ 
+      <div class="card">
+        <div class="card-title">Highlights</div>
+        <div class="highlights-grid">
+          <div class="highlight-card">
+            <div class="h-placeholder">🎨</div>
+            <div class="highlight-label">COLLECTION</div>
+          </div>
+          <div class="highlight-card">
+            <div class="h-placeholder">💻</div>
+            <div class="highlight-label">COLLECTION +1</div>
+          </div>
+        </div>
+        <button class="btn btn-secondary" style="width:100%;margin-top:12px;justify-content:center;">Edit highlights</button>
+      </div>
+ 
+      <div class="card">
+        <div class="card-title">
+          Friends <span style="font-size:13px;font-weight:400;color:var(--muted);">375</span>
+          <span class="card-edit">See all friends</span>
+        </div>
+        <div class="friends-grid">
+          <div class="friend-card">
+            <div class="friend-avatar">👤</div>
+            <div class="friend-name">তুহিন তুহিন</div>
+            <div class="friend-mutual">1 mutual</div>
+          </div>
+          <div class="friend-card">
+            <div class="friend-avatar">👤</div>
+            <div class="friend-name">Papu Kumar</div>
+            <div class="friend-mutual">1 mutual</div>
+          </div>
+          <div class="friend-card">
+            <div class="friend-avatar">👤</div>
+            <div class="friend-name">Nasir Khan Jadoon</div>
+            <div class="friend-mutual">2 mutual</div>
+          </div>
+          <div class="friend-card">
+            <div class="friend-avatar">👤</div>
+            <div class="friend-name">Misbah Uddin</div>
+            <div class="friend-mutual"></div>
+          </div>
+          <div class="friend-card">
+            <div class="friend-avatar">👤</div>
+            <div class="friend-name">ظفر خان</div>
+            <div class="friend-mutual"></div>
+          </div>
+          <div class="friend-card">
+            <div class="friend-avatar">👤</div>
+            <div class="friend-name">Kkr Rauf</div>
+            <div class="friend-mutual"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- RIGHT -->
+    <div>
+      <!-- Composer -->
+      <div class="composer">
+        <div class="composer-top">
+          <div class="composer-avatar"><img src="../my image.png" alt="" style="width: 48px;height: 48px;"></div>
+          <div class="composer-input" id="openModal" role="button" tabindex="0" aria-label="Create a post">What's on your mind, Mubashir?</div>
+        </div>
+        <div class="composer-actions">
+          <button class="comp-btn" id="openModalVideo">🔴 Live video</button>
+          <button class="comp-btn" id="openModalPhoto">🖼️ Photo/video</button>
+          <button class="comp-btn">🚩 Life update</button>
+        </div>
+      </div>
+ 
+      <!-- Posts header -->
+      <div class="posts-header">
+        <div class="posts-header-title">Posts</div>
+        <div style="display:flex;gap:8px;">
+          <button class="btn btn-secondary" style="font-size:13px;padding:7px 14px;">⚙ Filters</button>
+          <button class="btn btn-secondary" style="font-size:13px;padding:7px 14px;">📋 Manage posts</button>
+        </div>
+      </div>
+ 
+      <!-- Posts feed -->
+      <div id="postsFeed">
+        <div class="no-posts" id="emptyState">
+          <div class="no-posts-icon">✍️</div>
+          <div class="no-posts-text">No posts yet</div>
+          <div class="no-posts-sub">Create your first post using the composer above!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <script src="./profile.js"></script>
+</body>
+</html>

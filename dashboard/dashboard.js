@@ -2,7 +2,16 @@ let postContainer = document.querySelector(".postContainer");
 
 let description = document.getElementById("description");
 let postImage = document.getElementById("file");
-console.log(postImage);
+// console.log(postImage);
+
+let zindaUser = {
+  zindaUserName: "Mubashir",
+  zindaUserEmail: "mubashirkhan@gmail.com",
+  zindaUserPass: "12345678",
+};
+
+
+
 function postHandler() {
   let file = postImage.files[0];
   let imageUrl = URL.createObjectURL(file);
@@ -78,28 +87,51 @@ function postHandler() {
   description.value = "";
   postImage.value = "";
 
-
   let likeBtns = document.getElementsByClassName("fa-thumbs-up");
-let heartBtns = document.getElementsByClassName("fa-heart");
-let likeCounts = document.getElementsByClassName("likeCount");
+  let heartBtns = document.getElementsByClassName("fa-heart");
+  let likeCounts = document.getElementsByClassName("likeCount");
 
-//  thumbs up
-for (let i = 0; i < likeBtns.length; i++) {
-  likeBtns[i].onclick = function() {
-    let count = parseInt(likeCounts[i].innerText);
-    count++;
-    likeCounts[i].innerText = count;
-  };
+  //  thumbs up
+  for (let i = 0; i < likeBtns.length; i++) {
+    likeBtns[i].onclick = function () {
+      let count = parseInt(likeCounts[i].innerText);
+      count++;
+      likeCounts[i].innerText = count;
+    };
+  }
+
+  //  heart
+  for (let i = 0; i < heartBtns.length; i++) {
+    heartBtns[i].onclick = function () {
+      let count = parseInt(likeCounts[i].innerText);
+      count++;
+      likeCounts[i].innerText = count;
+    };
+  }
 }
 
-//  heart
-for (let i = 0; i < heartBtns.length; i++) {
-  heartBtns[i].onclick = function() {
-    let count = parseInt(likeCounts[i].innerText);
-    count++;
-    likeCounts[i].innerText = count;
-  };
-}
+function goToProfile(){
+setTimeout(()=>{
+// window.location.href="../porfilepage/index.html"
+},1200)
 }
 
+function  logoutHandler() {
+  console.log("logout chlaa");
+
+
+  zindaUser = null
+  console.log("mera current user hai zinda ===>",zindaUser);
+   if (!zindaUser){
+      Swal.fire({
+    icon: "success",
+    title : "Logout Successfully"
+    
+  });
+    setTimeout (()=>{
+window.location.href="../index.html"
+    },1200)
+   }
+  
+}
 

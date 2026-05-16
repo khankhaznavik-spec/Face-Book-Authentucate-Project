@@ -99,12 +99,15 @@
     gap: 0px 20px;
 }
 
-.right-btn-icons img {
+.dropdown img {
     height: 50px;
     width: 50px;
     border-radius: 50%;
 }
-
+/* dropdown  */
+.btnForDropdown.dropdown-toggle::after {
+  display: none !important;
+}
 .right-btn-icons i {
     font-size: 20px;
 
