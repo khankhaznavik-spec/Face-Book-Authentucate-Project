@@ -10,6 +10,7 @@
     height: 100vh;
     width: 100%;
     background: #f2f4f7;
+
 }
 
 .navbar {
@@ -137,7 +138,11 @@
 .col-3 {
     height: 89.99vh;
 }
-
+.left-content > .content >.iner-content{
+    font-size: 18px;
+   
+    font-weight: 700;
+}
 .content {
 
     display: block;
@@ -497,17 +502,17 @@ span{
     cursor: pointer;
     transition: all 1s;
 }
-.plusbtn .btn{
+.plusbtn .Chatimg {
     background: #c5c5c5;
     border-radius: 50%;
     height: 40px;
     width: 40px;
 }
-.plusbtn .btn i{
-    font-size: 18px;
-    position: relative;
-    top: 2.2px;
-    right: 3.2px;
+.plusbtn .Chatimg img {
+position: relative;
+height: 40px;
+width: 40px;
+border-radius: 50%;
 }
 .plusbtn p{
     font-size: 16px;
@@ -516,7 +521,35 @@ span{
     margin-top: 17px;
     margin-left: 10px;
 }
+.Chatimg {
+  position: relative;
+  width: fit-content;
+}
 
+.Chatimg img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.online-dot,
+.offline-dot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.online-dot {
+  background: #31a24c; /* Facebook green */
+}
+
+.offline-dot {
+  background: #9aa0a6; /* Gray */
+}
 
 /* ============================================================
    RESPONSIVE MEDIA QUERIES ONLY — original code above untouched

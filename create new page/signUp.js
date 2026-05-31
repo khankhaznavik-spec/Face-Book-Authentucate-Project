@@ -8,8 +8,10 @@ let email = document.getElementById("email");
 let password = document.getElementById("password");
 
 let userData = [];
+
 let user = {};
 let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const passwordRegex =/^(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8}$/;
 
 function signUpHandler(e) {
   e.preventDefault();
@@ -36,8 +38,8 @@ function signUpHandler(e) {
     return sweetalert("error", "Oops", "Please fill all the fields");
   }
 
-  if (user.password.length < 8) {
-    return sweetalert("error", "Oops", "Password at least 8 characters");
+  if (!passwordRegex.test(user.password)) {
+    return sweetalert("error", "Oops", "Password must be 8 characters with one upercase and lowercase letter and one special character");
   }
 
   if (!emailRegex.test(user.email)) {
