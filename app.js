@@ -1,30 +1,32 @@
 let userEmail = document.getElementById("input-email");
 let userPass = document.getElementById("input-password");
 
-let users = [
-  {
-    name: "Mubashir",
-    email: "mubashirkhan@gmail.com",
-    password: 12345678,
-  },
-  {
-    name: "Mubashir",
-    email: "mubashirkhan@gmail.com",
-    password: 12345678,
-  },
-  {
-    name: "Mubashir",
-    email: "khanmubashir@gmail.com",
-    password: 12345678,
-  },
-];
-
+// let users = [
+//   {
+//     name: "Mubashir",
+//     email: "mubashirkhan@gmail.com",
+//     password: 12345678,
+//   },
+//   {
+//     name: "Mubashir",
+//     email: "mubashirkhan@gmail.com",
+//     password: 12345678,
+//   },
+//   {
+//     name: "Mubashir",
+//     email: "khanmubashir@gmail.com",
+//     password: 12345678,
+//   },
+// ];
+let userData = JSON.parse(localStorage.getItem("userData"))
 let user = false;
+currtentUser = null;
+localStorage.setItem("User",JSON.stringify(currtentUser))
 // let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 function loginhandler() {
   userhai = null;
-  currtentUser = null;
+  
   if (!userEmail.value || !userPass.value) {
     Swal.fire({
       icon: "error",
@@ -34,15 +36,15 @@ function loginhandler() {
     return;
   }
 
-  for (let i = 0; i < users.length; i++) {
+  for (let i = 0; i < userData.length; i++) {
     // console.log(i);
-    if (users[i].email == userEmail.value) {
+    if (userData[i].email == userEmail.value) {
       // console.log("user mila");
       userhai = true;
 
-      if (userhai && users[i].password == userPass.value) {
+      if (userhai && userData[i].password == userPass.value) {
         // console.log("success");
-        currtentUser = users[i];
+        currtentUser = userData[i];
         break;
       }
     }

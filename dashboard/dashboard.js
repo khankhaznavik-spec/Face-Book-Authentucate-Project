@@ -4,6 +4,10 @@ let description = document.getElementById("description");
 let postImage = document.getElementById("file");
 // console.log(postImage);
 
+// localStorage se purani posts nikalo
+let allPosts = JSON.parse(localStorage.getItem("posts")) || [];
+
+
 let chatsObj = [
   {
     title: "Mubashir Khan",
@@ -57,11 +61,11 @@ let groupChatsSec = [
   },
 ];
 
-let zindaUser = {
-  zindaUserName: "Mubashir",
-  zindaUserEmail: "mubashirkhan@gmail.com",
-  zindaUserPass: "12345678",
-};
+// let zindaUser = {
+//   zindaUserName: "Mubashir",
+//   zindaUserEmail: "mubashirkhan@gmail.com",
+//   zindaUserPass: "12345678",
+// };
 
 function postHandler() {
   let file = postImage.files[0];
@@ -120,12 +124,29 @@ function postHandler() {
 
             </div>`;
 
+            // post ka data object banao
+let postObj = {
+  description: description.value,
+  image: imageUrl,
+};
+
+// array mein add karo
+allPosts.push(postObj);
+
+// localStorage mein save karo
+localStorage.setItem("posts", JSON.stringify(allPosts));
+
   // delete post
   let postCrossBtn = document.getElementsByClassName("fa-x");
 
   for (let i = 0; i < postCrossBtn.length; i++) {
     postCrossBtn[i].onclick = function () {
       postCrossBtn[i].parentNode.parentNode.parentNode.remove();
+      // =====>
+      allPosts.splice(i, 1);
+// console.log(allPosts);
+
+  localStorage.setItem("posts", JSON.stringify(allPosts));
     };
   }
 
@@ -187,7 +208,7 @@ let leftsidebar = document.querySelector(".content");
 let groupChatsSection = document.querySelector(".Groupchats");
 function groupChats() {
   for (let i = 0; i < chatsObj.length; i++) {
-    console.log(chatsObj[i]);
+    // console.log(chatsObj[i]);/
     leftsidebar.innerHTML += `
             <div class="iner-content">
               <img src=${chatsObj[i].img} alt="">
@@ -219,3 +240,44 @@ function groupChats() {
   groupChatsSection.innerHTML += `<hr>`;
 }
 groupChats();
+
+
+
+function getPosts() {
+
+  let allPosts = JSON.parse(localStorage.getItem("posts")) || [];
+
+  for (let i = 0; i < allPosts.length; i++) {
+
+    postContainer.innerHTML += `
+      <div class="post mb-4">
+
+        <div class="postHeader d-flex justify-content-between align-items-center px-4">
+          <div class="d-flex align-items-center gap-3 margin">
+            <img src="/HML classes/MUBASHIR KHAN PORTFOLIO/my image.png"
+            width="50" height="50">
+
+            <div class="d-flex flex-column align-items-center">
+              <h5>Mubashir</h5>
+              <span>14 May 2026</span>
+            </div>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-x"></i>
+          </div>
+        </div>
+
+        <div class="postDescription text-start px-4">
+          <p class="mb-2 mt-4">${allPosts[i].description}</p>
+        </div>
+
+        <div class="postImage">
+          <img src="${allPosts[i].image}" alt="">
+        </div>
+
+      </div>
+    `;
+  }
+}
+getPosts()
